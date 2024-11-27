@@ -6,7 +6,7 @@ import PostForm from '../components/post-form/PostForm'
 
 function EditPost() {
   const [post, setPost] = useState(null)
-  const {slug} = useParams
+  const {slug} = useParams()
   const navigate = useNavigate()
 
   useEffect(() => {

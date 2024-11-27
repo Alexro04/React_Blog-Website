@@ -63,7 +63,7 @@ export default function PostForm({post}){
   }, [watch, slugTransform, setValue])
   return (
     <form onSubmit={handleSubmit(submit)}
-    className="flex flex-wrap"
+    className="flex flex-wrap my-10"
     >
       <div className="w-2/3 px-2">
         <Input
@@ -89,7 +89,7 @@ export default function PostForm({post}){
         />
       </div>
 
-      <div className="1/3 px-2">
+      <div className="w-1/3 px-2">
         <Input
         label="Featured Image"
         type="file"
@@ -112,8 +112,8 @@ export default function PostForm({post}){
         />
         <Button
         type="submit"
-        bgColor={post ? "bg-green-500": undefined}
-        className="w-full"
+        bgColor={post ? "bg-teal-600": "bg-emerald-600"}
+        className="w-full py-2 text-white"
         >{post ? "Update": "Submit"}</Button>
       </div>
     </form>

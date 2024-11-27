@@ -29,11 +29,13 @@ function AllPosts() {
   return (
     <div className=''>
       <Container>
-        {posts.map((post) => (
-          <div className="p-2" key={post.$id}>
-            <PostCard {...post}/>
-          </div>
-        ))}
+        <div className="grid gap-2 grid-cols-3 mt-5">
+          {posts.map((post) => (
+            <div className="p-2" key={post.$id}>
+              <PostCard {...post}/>
+            </div>
+          ))}
+        </div>
       </Container>
     </div>
   )
