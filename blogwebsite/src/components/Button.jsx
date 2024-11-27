@@ -1,16 +1,18 @@
 import React from 'react'
 
 function Button({
-  content,
+  children,
   bgColor,
   textColor,
+  type,
   className = '',
   ...props
 }) {
   return (
     <button
+    type={type}
     className={`w-fit px-4 py-3 ${bgColor} ${textColor} ${className}`} {...props}>
-      {content}
+      {children}
     </button>
   )
 }

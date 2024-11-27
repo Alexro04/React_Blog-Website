@@ -1,5 +1,9 @@
 import React from 'react'
 import Logo from '../Logo.jsx'
+import X from '../../assets/icons/x-icon.svg'
+import tiktok from '../../assets/icons/tiktok-icon.svg'
+import instagram from '../../assets/icons/instagram-icon.svg'
+import facebook from '../../assets/icons/facebook-icon.svg'
 
 function Footer() {
   return (
@@ -7,13 +11,21 @@ function Footer() {
       <div className="h-20 flex justify-between items-center border-b border-solid border-gray-200">
         <Logo></Logo>
 
-        <div className="py-0 px-12 text-xs font-thin">This is a platform that allows users to express their arts. feel free to go through other people's work, and express yourself too.</div>
+        <div className="py-0 px-12 text-xs font-thin">"From heart to page, where poetry lives."</div>
 
-        <div className="flex gap-2">
-          <div className="opacity-70 grayscale flex justify-center items-center hover:grayscale-0"><img src="images/x-icon.svg" alt="x" /></div>
-          <div className="opacity-70 grayscale flex justify-center items-center hover:grayscale-0"><img src="images/instagram-icon.svg" alt="instagram" /></div>
-          <div className="opacity-70 grayscale flex justify-center items-center hover:grayscale-0"><img src="images/facebook-icon.svg" alt="facebook" /></div>
-          <div className="opacity-70 grayscale flex justify-center items-center hover:grayscale-0"><img src="images/tiktok-icon.svg" alt="tiktok" /></div>
+        <div className="flex gap-2 justify-center items-center">
+          <div className="opacity-70 grayscale hover:grayscale-0 hover:opacity-100">
+            <img src={X} alt="X" className='w-6 min-w-6'/>
+          </div>
+          <div className="opacity-70 grayscale hover:grayscale-0 hover:opacity-100">
+            <img src={tiktok} alt="X" className='w-6 min-w-6'/>
+          </div>
+          <div className="opacity-70 grayscale hover:grayscale-0 hover:opacity-100">
+            <img src={instagram} alt="X" className='w-6 min-w-6'/>
+          </div>
+          <div className="opacity-70 grayscale hover:grayscale-0 hover:opacity-100">
+            <img src={facebook} alt="X" className='w-6 min-w-6'/>
+          </div>
         </div>
       </div>
 

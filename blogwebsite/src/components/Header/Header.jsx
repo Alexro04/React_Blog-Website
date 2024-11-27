@@ -1,14 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import Container from '../Container/Container'
 import Logo from '../Logo'
 import LogoutBtn from './LogoutBtn'
-import Searchbar from '../Searchbar'
+import write from '../../assets/icons/write-icon-com.svg'
 
-function Header({
-  page
-}) {
+function Header() {
   const authStatus = useSelector((state) => state.auth.status)
   const navigate = useNavigate()
   const navItems = [
@@ -24,7 +22,7 @@ function Header({
       name: 'Write',
       slug: '/add-post',
       status: authStatus,
-      image: ''
+      image: write
     },
     {
       name: 'Login',
@@ -46,19 +44,15 @@ function Header({
             <Logo />
           </Link>
 
-          { page==='all-posts' && (
-            <Searchbar />
-          )}
-
-          <ul className='list-none flex items-center'>
+          <ul className='list-none flex items-center gap-7'>
             {
               navItems.map((item) => item.status ? (
-                <li key={item.name}>
+                <li key={item.name} className='flex gap-1 justify-center text-sm items-center opacity-60 hover:opacity-100 hover:scale-105 hover:transition-all'>
                   {
                     item.image && <img src={item.image} alt={item.name} className='w-5 h-5' />
                   }
                   <button
-                  className='bg-transparent border-none text-sm flex items-center opacity-60 ml-7 hover:opacity-100 hover:scale-105 hover:transition-all'
+                  className='bg-transparent border-none flex items-center'
                   onClick={() => navigate(authStatus ? item.slug.active || item.slug : item.slug.inactive || item.slug)}
                   >{item.name}</button>
                 </li>

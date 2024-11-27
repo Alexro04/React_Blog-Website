@@ -1,8 +1,11 @@
 import React from 'react'
+import CreateAccount from '../components/CreateAccount'
 
 function Signup() {
   return (
-    <div>Signup</div>
+    <div>
+      <CreateAccount />
+    </div>
   )
 }
 
