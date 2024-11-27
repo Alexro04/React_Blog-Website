@@ -31,14 +31,14 @@ export class Service {
         }
     }
 
-    async createPost({title, slug, content, featuredImage, status, userId, likes}){
+    async createPost({title, slug, content, featuredImage, status, userId}){
         try {
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug,
                 {
-                    title, content, featuredImage, status, userId, likes
+                    title, content, featuredImage, status, userId
                 }
             )
         } catch (error) {

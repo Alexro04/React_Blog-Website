@@ -51,7 +51,6 @@ function ViewPost() {
       appwriteService.getPost(slug).then((post) => {
         if (post) {
           setPost(post)
-          setLikes(post.likes)
         } else {
           navigate('/all-posts')
         }
@@ -78,7 +77,7 @@ function ViewPost() {
           </div>
           <div class="flex flex-col center mt-4 w-3/5">
             <h1 className='text-3xl font-semibold mb-2 text-center'>{post.title}</h1>
-            <div class="text-xl font-thin">
+            <div className="text-xl font-thin">
               {parse(post.content)}
             </div>
 

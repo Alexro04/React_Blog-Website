@@ -35,9 +35,9 @@ function Login() {
         <div className='mb-5'>
           <h3 className='text-base'>WELCOME BACK</h3>
           <h1 className='text-4xl m-0 whitespace-nowrap'>Log into your account<span className='text-6xl'>.</span></h1>
-          <div className="flex gap-2">
+          <div className="flex gap-2 text-sm mt-3">
             <p className='m-0'>Not a member yet?</p>
-            <Link to='/signup' className=''>Sign up</Link>
+            <Link to='/signup' className=' text-cyan-600'>Sign up</Link>
           </div>
         </div>
         { error && <p className='text-sm text-red-800'>{error}</p>}
@@ -58,7 +58,7 @@ function Login() {
               placeholder="Password"
               {...register("password", { required: true })}
             />
-            <Button type='submit' className="w-full hover:bg-blue-700">
+            <Button type='submit' className="hover:bg-cyan-700 py-3 rounded-full bg-cyan-300 w-1/3">
                 Log in{" "}
             </Button>
           </div>
