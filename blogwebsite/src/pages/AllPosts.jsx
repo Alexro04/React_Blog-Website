@@ -29,7 +29,7 @@ function AllPosts() {
   return (
     <div className=''>
       <Container>
-        <div className="grid gap-2 grid-cols-3 mt-5">
+        <div className="grid gap-2 grid-cols-3 my-7">
           {posts.map((post) => (
             <div className="p-2" key={post.$id}>
               <PostCard updated={post.$updatedAt} {...post}/>

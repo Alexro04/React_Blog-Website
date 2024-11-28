@@ -63,7 +63,7 @@ function ViewPost() {
       <Container>
         <div className="w-full flex flex-col items-center">
           <div className="relative min-w-80 w-1/2">
-            { isAuthor && <div className="w-fit absolute bottom-5 right-5 rounded-lg flex items-center justify-between px-2 py-0.5 bg-lime-800 backdrop-blur-xl bg-opacity-10">
+            { isAuthor && <div className="w-fit absolute bottom-5 right-5 rounded-lg flex items-center justify-between px-2 py-0.5 bg-black backdrop-blur-sm bg-opacity-80">
               <Link to={`/edit-post/${post.$id}`} className='relative flex justify-center group'>
                 <div className='absolute whitespace-nowrap bottom-10 bg-black text-white p-1.5 rounded-xl text-sm hover:opacity-100 hidden group-hover:block'>Edit this post</div>
                 <img src={editIcon} alt="Edit this post" className='hover:opacity-50 w-6 min-w-6 m-1' />
