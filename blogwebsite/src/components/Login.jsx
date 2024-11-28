@@ -58,7 +58,7 @@ function Login() {
               placeholder="Password"
               {...register("password", { required: true })}
             />
-            <Button type='submit' className="hover:bg-cyan-700 py-3 rounded-full bg-cyan-300 w-1/3">
+            <Button type='submit' className="hover:bg-cyan-700 py-3 px-6 rounded-full bg-cyan-300 w-1/3">
                 Log in{" "}
             </Button>
           </div>

@@ -31,14 +31,14 @@ export class Service {
         }
     }
 
-    async createPost({title, slug, content, featuredImage, status, userId}){
+    async createPost({title, slug, content, featuredImage, status, userId, authorName}){
         try {
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug,
                 {
-                    title, content, featuredImage, status, userId
+                    title, content, featuredImage, status, userId, authorName
                 }
             )
         } catch (error) {
@@ -47,14 +47,14 @@ export class Service {
         }
     }
 
-    async updatePost(slug, {title, content, featuredImage, status, likes}){
+    async updatePost(slug, {title, content, featuredImage, status, likes, authorName}){
         try {
             return await this.databases.updateDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug,
                 {
-                    title, content, featuredImage, status, likes
+                    title, content, featuredImage, status, likes, authorName
                 }
             )
         } catch (error) {

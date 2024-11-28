@@ -5,7 +5,7 @@ import PostCard from '../components/PostCard'
 
 function AllPosts() {
   const [posts, setPosts] = useState([])
-
+  
   useEffect(() => {
     appwriteService.getPosts([]).then((posts) => {
       if (posts) {
@@ -32,7 +32,7 @@ function AllPosts() {
         <div className="grid gap-2 grid-cols-3 mt-5">
           {posts.map((post) => (
             <div className="p-2" key={post.$id}>
-              <PostCard {...post}/>
+              <PostCard updated={post.$updatedAt} {...post}/>
             </div>
           ))}
         </div>

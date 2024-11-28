@@ -30,7 +30,8 @@ export default function PostForm({post}){
       }
       const dbPost = await appwriteSerice.updatePost(post.$id, {
         ...data,
-        featuredImage: file ? file.$id : undefined 
+        featuredImage: file ? file.$id : undefined,
+        authorName: userData.name
       })
       if (dbPost) {
         navigate(`/post/${dbPost.$id}`)
@@ -40,7 +41,7 @@ export default function PostForm({post}){
       if (file) {
         const fileId = file.$id
         data.featuredImage = fileId
-        const dbPost = await appwriteSerice.createPost({...data, userId: userData.$id})
+        const dbPost = await appwriteSerice.createPost({...data, userId: userData.$id, authorName: userData.name})
 
         if (dbPost) {
           navigate(`/post/${dbPost.$id}`)
